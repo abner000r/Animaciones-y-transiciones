@@ -1,0 +1,94 @@
+body {
+  --s: 200px; /* control the size*/
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+  
+  background:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
+     calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s)*0.577);
+}
+h1{
+  text-align: center;
+}
+.n1{
+  width: 100px;
+  height: 100px;
+  background: rgb(201, 19, 19);
+  transition: width 2s;
+  animation-name: n1;
+    animation-duration: 4s;
+    width: 100px;
+    height: 100px;
+    
+}
+.n1:hover {
+width: 250px;
+
+}
+@keyframes n1{
+  0%   {background-color: rgb(34, 238, 95);}
+25%  {background-color: rgb(101, 133, 240);}
+50%  {background-color: rgb(236, 166, 74);}
+100% {background-color: rgb(82, 79, 85);}
+}
+.n2 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 4s;
+}
+
+.n2:hover {
+  width: 250px;
+  height: 250px;
+}
+section {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+#gp1 {transition-timing-function: linear;}
+#gp2 {transition-timing-function: ease;}
+#gp3 {transition-timing-function: ease-in;}
+#gp4 {transition-timing-function: ease-out;}
+#gp5 {transition-timing-function: ease-in-out;}
+
+section:hover {
+  width: 300px;
+}
+.n3 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.n3:hover {
+  width: 250px;
+  height: 250px;
+  transform: rotate(180deg);
+}
+.grupo1{
+  display: flex;
+  justify-content: space-evenly;
+}
+.n4{
+width: 100px;
+height: 100px;
+background: red;
+transition: width 2s linear 1s;
+}
+
+.n4:hover {
+width: 250px;
+}
+.grupo2{
+  display: flex;
+  margin: 2%;
+  justify-content: space-between;
+}
