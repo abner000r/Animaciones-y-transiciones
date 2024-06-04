@@ -50,7 +50,20 @@
    /* animation-direction: reverse; /*para que de reversa */
     /*animation-direction: alternate; para que no solo vaya a una sola direcion 
     */
-  /*} */
+  /*} *//*
+body {
+  --s: 200px; /* control the size
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+  
+  background:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
+     calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s)*0.577);
+}
+*/
 body {
   --s: 200px; /* control the size*/
   --c1: #1d1d1d;
@@ -62,4 +75,126 @@ body {
      calc(.5*var(--s)) calc(.5*var(--s)*0.577),
     repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
   background-size: var(--s) calc(var(--s)*0.577);
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta el contenedor al 100% de la altura de la ventana */
+}
+
+.cuadro {
+  width: 700px;
+  height: 550px;
+  background-color: rgb(154, 245, 139);
+  /* Animación */
+  animation: mover 2s infinite alternate;
+  border-radius: 20px;
+}
+
+@keyframes mover {
+  0% {
+      transform: translateX(-100px);
+  }
+  100% {
+      transform: translateX(100px);
+  }
+}
+h1{
+text-align: center;
+}
+.animacion1 {
+width: 100px;
+height: 100px;
+background-color: red;
+animation-name: animacion1;
+animation-duration: 4s;
+margin: 2%;
+border-radius: 20px;
+
+}
+
+@keyframes animacion1 {
+0%   {background-color: red;}
+25%  {background-color: yellow;}
+50%  {background-color: blue;}
+100% {background-color: green;}
+}
+h3{
+margin: 2%;
+}
+.animacion2 {
+width: 100px;
+height: 100px;
+background-color: red;
+position: relative;
+animation-name: animacion2;
+animation-duration: 4s;
+margin: 2%;
+border-radius: 20px;
+}
+.animacion2{
+margin: 25;
+}
+@keyframes  animacion2 {
+0%   {background-color:red; left:0px; top:0px;}
+20%  {background-color:yellow; left:200px; top:0px;}
+40%  {background-color:blue; left:200px; top:200px;}
+45%  {background-color:green; left:0px; top:200px;}
+80% {background-color:red; left:0px; top:0px;}
+}
+.animacion3 {
+width: 100px;
+height: 100px;
+background-color: red;
+position: relative;
+animation-name: animacion3;
+animation-duration: 4s;
+animation-delay: 2s;
+margin: 2%;
+border-radius: 50px;
+
+}
+
+@keyframes animacion3{
+0%   {background-color:red; left:0px; top:0px;}
+25%  {background-color:yellow; left:200px; top:0px;}
+50%  {background-color:blue; left:200px; top:200px;}
+75%  {background-color:green; left:0px; top:200px;}
+100% {background-color:red; left:0px; top:0px;}
+}
+.grupo1{
+display: flex;
+justify-content: space-between;
+margin: 2%;
+}
+.grupo2{
+display: flex;
+justify-content: space-between;
+}
+article {
+width: 100px;
+height: 50px;
+background-color: red;
+font-weight: bold;
+position: relative;
+animation: mymove 5s;
+animation-fill-mode: forwards;
+border-radius: 20px;
+
+}
+
+#anm1 {animation-timing-function: linear;}
+#anm2 {animation-timing-function: ease;}
+#anm3 {animation-timing-function: ease-in;}
+#anm4 {animation-timing-function: ease-out;}
+#anm5 {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+from {left: 0px;}
+to {left: 300px;}
+}
+.centro{
+display: flex;
+justify-content: center;
 }
